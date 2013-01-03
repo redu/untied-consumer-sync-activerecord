@@ -1,0 +1,8 @@
+User:
+  attributes:
+    - login
+    - name
+    - id
+  mappings:
+    id:  my_id
+  name: User
