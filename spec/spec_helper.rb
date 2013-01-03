@@ -5,8 +5,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require 'untied-consumer-sync-mongoid'
-#require 'support/setup_models'
+require 'untied-consumer-sync-activerecord'
+require 'support/setup_ar_and_schema'
 require 'untied-consumer-sync/backend/backend_shared_example'
 
 RSpec.configure do |config|
