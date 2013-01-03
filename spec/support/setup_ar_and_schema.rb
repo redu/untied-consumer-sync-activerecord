@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 require 'active_record'
+require 'untied-consumer-sync'
 
 module SetupActiveRecord
   # Connection
@@ -14,13 +15,15 @@ module SetupActiveRecord
       t.string :my_id
       t.string :login
       t.string :name
-      t.string :zombie, :default => true
+      t.boolean :zombie, :default => true
       t.timestamps
     end
   end
 
   # Models
   class ::User < ActiveRecord::Base
+    include Untied::Consumer::Sync::Zombificator::ActsAsZombie
+
     validates_presence_of :login
   end
 end
