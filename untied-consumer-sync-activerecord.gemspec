@@ -21,8 +21,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'sqlite3'
 
-  #gem.add_runtime_dependency 'untied-consumer-sync'
-  gem.add_runtime_dependency 'activerecord'
+  gem.add_runtime_dependency 'untied-consumer-sync', '~> 0.0'
+  gem.add_runtime_dependency 'activerecord', '~> 3.2'
 
    if RUBY_VERSION < "1.9"
     gem.add_development_dependency "ruby-debug"
